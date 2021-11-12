@@ -1,0 +1,18 @@
+.imagebanner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  z-index: -1;
+}
+
+.banner2 {
+    padding: 150px;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  background-size: cover;
+  position: relative;
+}

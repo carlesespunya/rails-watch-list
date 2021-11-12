@@ -1,4 +1,5 @@
-<div class="banner1">
+<div class="banner2" style="position: relative;">
+    <%= cl_image_tag @list.photo.key, height: 1000, width: 1500, crop: :fill, class: "imagebanner" %>
     <h2><%= @list.name %></h2>
 </div>
 

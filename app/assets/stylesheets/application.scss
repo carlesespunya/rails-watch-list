@@ -12,6 +12,8 @@
 @import "components/index";
 @import "pages/index";
 
+@import "list/show";
+
 .card-image {
   object-fit: cover;
   object-position: center;
@@ -28,6 +30,7 @@
   color: white;
   margin-bottom: 40px;
   background-size: cover;
+  position: relative;
 }
 
 .button {
