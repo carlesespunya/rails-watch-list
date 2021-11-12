@@ -1,0 +1,7 @@
+<div class="con">
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <%= f.submit "Save Form", class: "btn btn-primary float-right"%>
+  <% end %>
+</div>

@@ -1,0 +1,26 @@
+<div class="banner1">
+    <h2><%= @list.name %></h2>
+</div>
+
+<div class="con">
+  <button type="button" class="btn btn-success float-right"><%= link_to "Add a movie", new_list_bookmark_path(@list) , :class => "button" %></button>
+</div>
+<div class="container">
+  <div class="row">
+  <% @list.movies.each do |movie| %>
+    <div class="col-6">
+      <div class="card">
+        <%= image_tag "#{movie.poster_url}", alt: "Poster", class:"card-image", height: 300 %>
+        <div class="card-body">
+          <h5 class="card-title"><strong><%=  movie.title%></strong> <small>/ <%=movie.rating%> <i class="fas fa-star" style="color: #ffb703;"></i> </small></h5>
+          <p class="card-text"><%=  movie.overview%></p>
+          <div class="d-flex justify-content-between">
+            <p class="card-text"><small class="text-muted"><i class="fas fa-quote-left"></i> <%= (@list.bookmarks.select { |bok| bok.movie_id == movie.id })[0].comment %></small></p>
+            <%= link_to 'Delete', bookmark_path(@list), method: :delete, data: {confirm: "Are you sure?"}, :class => "link" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>

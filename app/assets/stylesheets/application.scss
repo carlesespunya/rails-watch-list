@@ -11,3 +11,68 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.card-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.card {
+  margin: 20px;
+}
+
+.banner1 {
+  background-image: url("ban.png");
+  padding: 150px;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  background-size: cover;
+}
+
+.button {
+  color: white;
+}
+
+h1 {
+  font-family: 'Prompt', sans-serif;
+}
+
+h2 {
+  font-family: 'Prompt', sans-serif;
+}
+
+h3 {
+  font-family: 'Prompt', sans-serif;
+}
+
+h4 {
+  font-family: 'Prompt', sans-serif;
+}
+
+h5 {
+  font-family: 'Prompt', sans-serif;
+}
+
+p {
+  font-family: 'Prompt', sans-serif;
+}
+
+.con {
+  margin: 100px;
+  margin-top: 40px;
+}
+
+.button:hover {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.link {
+  color: red;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: red;
+}
