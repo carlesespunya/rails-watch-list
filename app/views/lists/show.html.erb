@@ -7,16 +7,16 @@
 </div>
 <div class="container">
   <div class="row">
-  <% @list.movies.each do |movie| %>
+  <% @list.bookmarks.each do |bookmark| %>
     <div class="col-6">
       <div class="card">
-        <%= image_tag "#{movie.poster_url}", alt: "Poster", class:"card-image", height: 300 %>
+        <%= image_tag "#{bookmark.movie.poster_url}", alt: "Poster", class:"card-image", height: 300 %>
         <div class="card-body">
-          <h5 class="card-title"><strong><%=  movie.title%></strong> <small>/ <%=movie.rating%> <i class="fas fa-star" style="color: #ffb703;"></i> </small></h5>
-          <p class="card-text"><%=  movie.overview%></p>
+          <h5 class="card-title"><strong><%=  bookmark.movie.title%></strong> <small>/ <%=bookmark.movie.rating%> <i class="fas fa-star" style="color: #ffb703;"></i> </small></h5>
+          <p class="card-text"><%=  bookmark.movie.overview%></p>
           <div class="d-flex justify-content-between">
-            <p class="card-text"><small class="text-muted"><i class="fas fa-quote-left"></i> <%= (@list.bookmarks.select { |bok| bok.movie_id == movie.id })[0].comment %></small></p>
-            <%= link_to 'Delete', bookmark_path(@list), method: :delete, data: {confirm: "Are you sure?"}, :class => "link" %>
+            <p class="card-text"><small class="text-muted"><i class="fas fa-quote-left"></i> <%= bookmark.comment %></small></p>
+            <%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: {confirm: "Are you sure?"}, :class => "link" %>
           </div>
         </div>
       </div>
