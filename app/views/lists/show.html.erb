@@ -1,5 +1,4 @@
-<div class="banner2" style="position: relative;">
-    <%= cl_image_tag @list.photo.key, height: 1000, width: 1500, crop: :fill, class: "imagebanner" %>
+<div class="banner2" style="background-image: url(<%=@list.photo.key%>);">
     <h2><%= @list.name %></h2>
 </div>
 
